@@ -22,6 +22,17 @@ def find_num_div7andmult5():
     print(f'{len(num)} Numbers fit the condition: \n{num}')
 
 
+##### ANSWER #####
+start = 1500
+end = 2700
+numbers = []
+for num in range(start, end+1):
+    if num % 7 == 0 and num % 5 ==0:
+        numbers.append(num)
+print(numbers)
+##### ANSWER #####
+    
+    
 
 
 # 2. Write a Python program to count the number of even and odd numbers from a series of numbers.
@@ -50,6 +61,20 @@ def num_odd_even(x):
     # print(f'i: {i}. len(x): {len(x)}')
     print(f'Number of even numbers : {len(num_even)}')
     print(f'Number of odd numbers : {len(num_odd)}')
+
+
+##### ANSWER #####
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+odds = 0
+evens = 0
+for num in numbers:
+    if num % 2:
+        odds += 1
+    else:
+        evens += 1
+print('Number of even numbers : {}'.format(evens))
+print('Number of odd numbers : {}'.format(odds))
+##### ANSWER #####
 
 
 
@@ -84,6 +109,19 @@ def fizzbuzz():
     print(fizzbuzz)
 
 
+##### ANSWER #####
+for i in range(0, 51):
+    if i % 15==0:
+        print('FizzBuzz')
+    elif i % 3==0:
+        print('Fizz')
+    elif i % 5==0:
+        print('Buzz')
+    else:
+        print(i)
+##### ANSWER #####
+
+
 
 
 # 4. Given a list iterate it and display numbers which are divisible by 5 and if you find number greater than 150 stop the loop iteration
@@ -105,6 +143,16 @@ def num_div5_150max(x):
             print(x[i])
         elif x[i]>150:
             break
+
+##### ANSWER #####
+list1 = [12, 15, 32, 42, 55, 75, 122, 132, 150, 180, 200]
+
+for num in list1:
+    if num > 150:
+        break
+    elif num % 5 == 0:
+        print(num)
+##### ANSWER #####
 
 
 
@@ -137,9 +185,14 @@ a=list(range(0, 51))
 fizzbuzz_comp = [print('Fizz') if a[i]%3==0 and not a[i]%5==0 else print('Buzz') if a[i]%5==0 and not a[i]%3==0 else print('FizzBuzz') if a[i]%3==0 and a[i]%5==0 else print(a[i]) for i in range(0,(len(a)))]
 
 
+##### ANSWER ##### prob1
+[num for num in range(start, end+1) if (num % 7 == 0) & (num % 5 ==0)]
+##### ANSWER #####
 
 
-# 7. Pcik one of the questions above and use while loop for a different solution
+
+
+# 7. Pick one of the questions above and use while loop for a different solution
 
 # Use question 4
 def num_div5_150max_while(x):

@@ -26,8 +26,11 @@ def calculation(a, b):
 	substraction = a-b
 	print(f'sum of two numbers: {addition}')
 	print(f'diff of two numbers: {substraction}')
+    
+    # answer 
+    # return a+b, a-b
 
-
+    
 
 
 ####### NOT SURE ABOUT the ask for this question, define within enclosed space  ######## 14JAN23
@@ -49,8 +52,12 @@ def triangle_lambda():
 def triangle_lambda(base,height):
     return (lambda base, height : 0.5*base*height)(base,height)
 
+    # answer
+    # lambda_triangle_area = lambda b,h: b*h/2
+    # return lambda_triangle_area
 
-
+    
+    
 
 def sort_words(hyphen_str):
 	'''
@@ -74,7 +81,11 @@ def sort_words(hyphen_str):
     hyphen_sep.sort()
     print('-'.join(hyphen_sep))
 
+    # answer
+    # sorted_str = '-'.join(sorted(hyphen_str.split('-')))
+    # return sorted_str
 
+    
 
 
 def perfect_number(num):
@@ -97,22 +108,32 @@ def perfect_number(num):
 	'''
 
     divisor = []
-    for i in range(1,x+1):
-        if x%i==0:
+    for i in range(1,num+1):
+        if num%i==0:
             divisor.append(i)
-    print(f'All divisors of {x}: {divisor}') 
+    print(f'All divisors of {num}: {divisor}') 
 
     # # def1: A perfect number is a positive integer that is equal to the sum of its proper positive divisors.
-    # x_perfect = x == sum(divisor[0:-1])
+    # num_perfect = num == sum(divisor[0:-1])
 
     # def2: A perfect number is a number  that is half the sum of all of its positive divisors (including itself)
     num_to_check = sum(divisor)/2
-    x_perfect = x == num_to_check
+    num_perfect = num == num_to_check
     
-    print(f'Is {x} perfect?: {x_perfect}')
+    print(f'Is {num} perfect?: {num_perfect}')
+
+    # answer
+    # divisor_sum = 0
+    # for i in range(1, number):
+    #     if number%i == 0:
+    #         divisor_sum += i
+    # if divisor_sum == number:
+    #     perfect = True
+    # else:
+    #     perfect = False
+    # return perfect
 
 
-
-
+    
 if __name__ == '__main__':
 	pass

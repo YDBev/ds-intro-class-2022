@@ -59,7 +59,13 @@ def check_path(path):
     else : 
         print('False , []')
 
+    # answer
+    # path_info_list = []
+    # exist_flag = os.path.exists(path)
+    # if exist_flag:
+    #     path_info_list.extend([os.path.isabs(path), os.path.isdir(path), os.path.idfile(path)])
 
+    # return exist_flag, path_info_list
 
 
 def read_csv(file):
@@ -77,13 +83,16 @@ def read_csv(file):
     >>> 14
     '''
 
-    data = []
     with open(file, 'r') as f:
         reader = csv.reader(f, delimiter=',')  # change delimiter
         line = 0
         for i in reader:
             line = line+1
         print(line)
+
+    # answer # alternative solution not using csv module
+    # with open('../../python_basics/class03/AMZN.csv', 'r') as f:
+    #     lines = len(f.readlines())
 
 
 
@@ -119,6 +128,11 @@ def write_csv(data_list, output_file):
             i += 1
             writer.writerow(data_list[i-1]) # print index corresponding to row
 
+    # answer
+    # with open(output_file, 'w') as f:
+    #     writer = csv.writer(f)
+    #     for row in data_list:
+    #         writer.writerow(row)
 
 
 
@@ -145,7 +159,10 @@ def read_json(file):
         dict_js = dict(zip(dict_key, dict_value))
         print(dict_js)
 
-
+    # answer
+    # with open(file) as f:
+    #     js = json.load(f)
+    # return js
 
 
 
